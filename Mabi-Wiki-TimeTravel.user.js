@@ -28,7 +28,7 @@
 (function() {
     'use strict';
 
-    // Search for a revision link from before certain date. The revision's ID is a sequential edit counter of every edit on the whole wiki.
+    // Search for a revision link from before certain a date. The revision's ID is a sequential edit counter of every edit on the whole wiki.
     // ie. The wiki as it was at the date and time of an edit can be found by grabbing the first edit less than or equal to the specified ID on every page. 
     //     (Some exceptions apply.)
     // 274799 = 11:48, 17 April 2011 - A couple weeks before G14 released on NA
