@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mabinogi World Wiki - Time Travel (G13/MabiPro Wiki Conversion)
 // @namespace    http://twitter.com/MusicalAnvil
-// @version      0.1
+// @version      0.11
 // @description  Browse like it's 2011 - Redirects to older versions of pages on the Mabinogi World Wiki.
 // @author       Embruh/Anvil
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=mabinogiworld.com
@@ -48,7 +48,7 @@
             if (xhr.readyState == 4) {
                 if (xhr.status == 200){
                     reply = select_revision(xhr.responseText);
-                    console.log("Reply: " + reply);
+                    // (Debug) console.log("Reply: " + reply);
                 }
 
                 if (xhr.status != 200){
@@ -62,7 +62,7 @@
 
     // Select revision off of page
     function select_revision(xhrResponse, revisionID) {
-        console.log("Revision select start");
+        // (Debug) console.log("Revision select start");
 
         var container = document.implementation.createHTMLDocument().documentElement;
         container.innerHTML = xhrResponse;
@@ -73,10 +73,10 @@
             if (liArray[i].getAttribute('data-mw-revid') <= targetRevision) {
                 revisionID = liArray[i].getAttribute('data-mw-revid');
                 i = liArray.length;
-                console.log("In function: " + revisionID);
+                // (Debug) console.log("In function: " + revisionID);
             }
         }
-        console.log("Revision select end");
+        // (Debug) console.log("Revision select end");
         return revisionID;
     }
 
@@ -101,7 +101,7 @@
             else {
                 pageTitle = pageTitle.replace('/view/', '');
             }
-            console.log(pageTitle);
+            // (Debug) console.log(pageTitle);
 
             if (pageTitle.includes('_Dungeon')){
                 pageTitle = pageTitle.replace('Category:', '');
@@ -109,14 +109,14 @@
             }
 
             var historyURL = window.location.protocol + "//" + window.location.host + "/index.php?title=" + pageTitle + "&offset=&limit=9999&action=history";
-            console.log(historyURL);
+            // (Debug) console.log(historyURL);
 
             var selectedRevision;
             selectedRevision = xhr_getrev(historyURL);
-            console.log("Out of function: " + selectedRevision);
+            // (Debug) console.log("Out of function: " + selectedRevision);
 
             var newURL = window.location.protocol + "//" + window.location.host + "/index.php?title=" + pageTitle + "&oldid=" + selectedRevision;
-            console.log(newURL);
+            // (Debug) console.log(newURL);
 
             location.replace (newURL);
 
