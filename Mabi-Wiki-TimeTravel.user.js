@@ -21,8 +21,8 @@
 // @grant        GM.openInTab
 // @grant        GM.xmlHttpRequest
 // @run-at       document-start
-// @updateURL    
-// @downloadURL
+// @updateURL    https://github.com/MusicalAnvil/Mabinogi-World-Wiki-Time-Travel/raw/main/Mabi-Wiki-TimeTravel.user.js
+// @downloadURL  https://github.com/MusicalAnvil/Mabinogi-World-Wiki-Time-Travel/raw/main/Mabi-Wiki-TimeTravel.user.js
 // ==/UserScript==
 
 (function() {
