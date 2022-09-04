@@ -82,17 +82,33 @@
 
     // main function
     window.addEventListener("load", function() {
+        // (To-do) Add button/setting to switch time-travel on/off
+
+        // Add notification on page load for undefined oldid
+        if (window.location.search.includes('&oldid=undefined')) {
+            let p = document.createElement("p");
+            p.innerText = "Viewing live version; old revision not found";
+
+            const styles = {
+                fontSize: '12px',
+                color: '#ba0000'
+            }
+            Object.assign(p.style, styles)
+            document.querySelector("#contentSub").append(p);
+        }
+
+        // Get current url, exclude revisions and non-informational pages
         var currentURL = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.search;
         if (currentURL.includes('&oldid=') || currentURL.includes('&action')) {
             return;
         }
 
-        const historyElement = document.querySelector("#ca-history")
-
+        // Do not run on history page (redundant but eh)
         if (document.querySelector("#ca-history") == null) {
             return
         }
         else {
+            // Find revision and redirect
             var pageTitle = window.location.pathname;
             if (window.location.pathname == "/index.php") {
                 pageTitle = window.location.search;
@@ -101,7 +117,6 @@
             else {
                 pageTitle = pageTitle.replace('/view/', '');
             }
-            // (Debug) console.log(pageTitle);
 
             if (pageTitle.includes('_Dungeon')){
                 pageTitle = pageTitle.replace('Category:', '');
@@ -109,14 +124,11 @@
             }
 
             var historyURL = window.location.protocol + "//" + window.location.host + "/index.php?title=" + pageTitle + "&offset=&limit=9999&action=history";
-            // (Debug) console.log(historyURL);
 
             var selectedRevision;
             selectedRevision = xhr_getrev(historyURL);
-            // (Debug) console.log("Out of function: " + selectedRevision);
 
             var newURL = window.location.protocol + "//" + window.location.host + "/index.php?title=" + pageTitle + "&oldid=" + selectedRevision;
-            // (Debug) console.log(newURL);
 
             location.replace (newURL);
 
