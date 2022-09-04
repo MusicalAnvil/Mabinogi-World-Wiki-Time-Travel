@@ -12,3 +12,13 @@ Tampermonkey: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermon
 
 #### Go to the following link (link to the raw .js file in the repo):
 https://github.com/MusicalAnvil/Mabinogi-World-Wiki-Time-Travel/raw/main/Mabi-Wiki-TimeTravel.user.js
+
+
+## Updating
+
+#### Automatically
+Tampermonkey:
+Open the script itself inside the extension menu. Select "Settings" > "Check for Updates" and check the box.
+
+#### Manually
+Just click the installation link again.
