@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mabinogi World Wiki - Time Travel (G13/MabiPro Wiki Conversion)
 // @namespace    http://twitter.com/MusicalAnvil
-// @version      0.11
+// @version      0.2
 // @description  Browse like it's 2011 - Redirects to older versions of pages on the Mabinogi World Wiki.
 // @author       Embruh/Anvil
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=mabinogiworld.com
