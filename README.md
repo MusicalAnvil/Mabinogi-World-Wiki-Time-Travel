@@ -9,5 +9,4 @@ A simple userscript for use with wiki.mabinogiworld.com that lets you travel bac
 Tampermonkey: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/), [Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Website](https://www.tampermonkey.net/)
 
 ####Go to the following link (link to the raw .js file in the repo):
-
 https://github.com/MusicalAnvil/Mabinogi-World-Wiki-Time-Travel/raw/main/Mabi-Wiki-TimeTravel.user.js
