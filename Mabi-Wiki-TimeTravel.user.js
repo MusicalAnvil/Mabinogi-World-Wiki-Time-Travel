@@ -87,7 +87,7 @@
         // Add notification on page load for undefined oldid
         if (window.location.search.includes('&oldid=undefined')) {
             let p = document.createElement("p");
-            p.innerText = "Viewing live version; old revision not found";
+            p.innerText = "Viewing live version; old revision not found. This page's content may not be applicable to an older version of the game.";
 
             const styles = {
                 fontSize: '12px',
