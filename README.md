@@ -1,7 +1,7 @@
 # Mabinogi World Wiki - Time Travel (G13 Wiki Conversion)
 Browse like it's 2011 - Redirects to older versions of pages on the Mabinogi World Wiki.
 
-Alternative Names: MabiPro Wikiunfucker, Pastinogi 🍝
+Alternative Names: MabiPro Wiki Unfucker, Pastinogi 🍝
 
 A simple userscript for use with [wiki.mabinogiworld.com](https://wiki.mabinogiworld.com) that lets you travel back in time to G13 (or almost any other time if you'd prefer). 
 
